@@ -38,9 +38,9 @@ class App extends React.Component {
           {title: 'Login', path: '/login'}
         ],
         home: {
-          title: 'Home Title',
-          subtitle: 'Home subtitle from App.js',
-          text: 'Text from home App.js'
+          title: 'FAMUQI  WEBSITE',
+          subtitle: 'FP Pemrograman Web',
+          text: '05111840000071'
         },
         games: {
           title: 'Games'
@@ -55,7 +55,8 @@ class App extends React.Component {
           title: 'Contact Me'
         },
         login: {
-          title: 'Account'
+          title: 'Account',
+          text: 'Text from home App.js'
         },
       }
     }
@@ -97,10 +98,12 @@ class App extends React.Component {
           {() => <ContactPage title={this.state.contact.title} />} 
           />
           <Route path="/login" exact render=
-          {() => <LoginPage title={this.state.login.title} />} 
+          {() => <LoginPage title={this.state.login.title} 
+            text={this.state.home.text}
+          />} 
           />
 
-          <Footer />
+          {/* <Footer /> */}
 
         </Container>
       </Router>

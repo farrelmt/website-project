@@ -10,7 +10,7 @@ const Login = (props) => {
         <section className="login">
             <div className="loginContainer">
                 <label>
-                    Username
+                    Email
                 </label>
                 <input 
                     type="text" 

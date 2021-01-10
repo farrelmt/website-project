@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 
 function HomePage(props) {
     return(
-        <div>
+        <div className="py-5">
             <Hero title={props.title} subtitle={props.subtitle} text={props.text}/>
         
         </div>

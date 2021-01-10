@@ -13,14 +13,14 @@ code {
 }
 
 .g-card{
-  margin: 20px;
+  margin: 10px;
 }
 
 .g-card-image{
-  border-radius: 10px;
-  width: 300px;
-  height: 480px;
-  box-shadow: 0px 0px 3px 1px #ccc;
+  border-radius: 5px;
+  width: 480px;
+  height: 270px;
+  box-shadow: 0px 0px 1px 1px #ccc;
 }
 
 .g-card-info{

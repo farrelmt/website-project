@@ -3,11 +3,15 @@ import React, {
   useEffect,
 } from 'react';
 
-import fire from "./fire";
+import fire from "./fireauth";
 import "./App.css";
 
 import Hero from "./components/Hero"
 import Login from "./components/Login";
+
+import Button from 'react-bootstrap/Button';
+
+import "./appLogin.css";
 
 const AppLogin = () => {
     const [user, setUser] = useState('');
@@ -66,7 +70,11 @@ const AppLogin = () => {
             });
     };
 
-    const handleLogout = () => {
+    // const handleLogout = () => {
+    //     fire.auth().signOut();
+    // };
+
+    function handleLogout(){
         fire.auth().signOut();
     };
 
@@ -89,24 +97,30 @@ const AppLogin = () => {
 
     return (
         <div className="App">
+            
             {user ? ( //if user
-                <p>BERHASIL LOGIN</p>
+                <p> 
+                    <h3>Berhasil Login</h3>
+                    <br/><br/>
+                    <Button className="btn btn-dark" onClick={handleLogout}>Logout</Button>
+                </p>
+                
             ) : ( //if no user
                  <Login 
-                email={email} 
-                setEmail={setEmail} 
-                password={password} 
-                setPassword={setPassword} 
-                handleLogin={handleLogin} 
-                handleSignup={handleSignup}
-                hasAccount={hasAccount}
-                setHasAccount={setHasAccount}
-                emailError={emailError}
-                passwordError={passwordError}
-            />
+                    email={email} 
+                    setEmail={setEmail} 
+                    password={password} 
+                    setPassword={setPassword} 
+                    handleLogin={handleLogin} 
+                    handleSignup={handleSignup}
+                    hasAccount={hasAccount}
+                    setHasAccount={setHasAccount}
+                    emailError={emailError}
+                    passwordError={passwordError}
+                />
             )}
 
-
+            <Hero handleLogout={handleLogout}/>
            
         </div>
     );

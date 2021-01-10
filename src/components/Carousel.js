@@ -5,6 +5,7 @@ import Card from '../components/Card'
 import header1 from '../Img/0.png';
 import header2 from '../Img/1.png';
 import header3 from '../Img/2.png';
+import header4 from '../Img/3.png';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -18,26 +19,34 @@ class Carousel extends React.Component{
             items: [
                 {
                     id: 0,
-                    title: 'Title 1',
-                    subtitle: 'Subtitle 1',
+                    title: 'A Hat In Time',
+                    subtitle: 'Gears for Breakfast',
                     imgSrc: header1,
-                    link: 'http://google.com',
+                    link: 'https://store.steampowered.com/app/253230/A_Hat_in_Time/',
                     selected: false
                 },
                 {
                     id: 1,
-                    title: 'Title 2',
-                    subtitle: 'Subtitle 2',
+                    title: 'Fall Guys: Ultimate Knockout',
+                    subtitle: 'Mediatonic',
                     imgSrc: header2,
-                    link: 'http://youtube.com',
+                    link: 'https://store.steampowered.com/app/1097150/Fall_Guys_Ultimate_Knockout/',
                     selected: false
                 },
                 {
                     id: 2,
-                    title: 'Title 3',
-                    subtitle: 'Subtitle 3',
+                    title: "Tom Clancy's Rainbow Six® Siege",
+                    subtitle: 'Ubisoft',
                     imgSrc: header3,
-                    link: 'http://github.com',
+                    link: 'https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/',
+                    selected: false
+                },
+                {
+                    id: 3,
+                    title: "Dishonored 2",
+                    subtitle: 'Arkane Studios',
+                    imgSrc: header4,
+                    link: 'https://store.steampowered.com/app/403640/Dishonored_2/',
                     selected: false
                 },
             ]
@@ -70,7 +79,7 @@ class Carousel extends React.Component{
     render(){
         return(
             <Container fluid={true}>
-                <Row className="justify-content-around">
+                <Row className="justify-content-around ">
                     {
                         this.makeItems(this.state.items)
                     }
