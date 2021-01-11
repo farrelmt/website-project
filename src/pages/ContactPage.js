@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import ContactForm from '../components/ContactForm';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
-import fire from "../fire";
+import firest from "../fire";
 
 class ContactPage extends React.Component {
     
@@ -34,17 +34,17 @@ class ContactPage extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        fire.collection('contact').add({
+       firest.collection('contact').add({
           name: this.state.name,
           email: this.state.email,
           message: this.state.message,
         });
 
-        fire.then(()=>{
+       firest.then(()=>{
            alert('Message Sent');
         });
 
-        fire.catch(error =>{
+       firest.catch(error =>{
             alert(error.message);
         });
 

@@ -3,7 +3,7 @@ import React, {
   useEffect,
 } from 'react';
 
-import fire from "./fireauth";
+import fire from "./fire";
 import "./App.css";
 
 import Hero from "./components/Hero"

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
-import fire from "../fire";
+import {firest} from "../fire";
 import "../pages/app.css";
 
 const ContactPage = () => {
@@ -19,7 +19,7 @@ const ContactPage = () => {
     e.preventDefault();
     setLoader(true);
 
-    fire.collection("contacts")
+    firest.collection("contacts")
       .add({
         name: name,
         email: email,
